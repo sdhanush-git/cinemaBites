@@ -30,7 +30,6 @@ const Search = ({ apiPath }) => {
           {movies.map((movie) => (
             <Card key={movie.id} movie={movie} />
           ))}
-          {/* <p>Search Param</p> */}
         </div>
       </section>
     </main>

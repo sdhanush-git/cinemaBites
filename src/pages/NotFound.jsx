@@ -1,23 +1,39 @@
-import notFound from "../assets/notFound.jpg" 
+import notFound from "../assets/notFound.jpg";
 import { Link } from "react-router-dom";
 
 const PageNotFound = () => {
   return (
-    <main className=" display-flex items-center justify-center min-h-screen p-4">
-      <section className=" object-cover">
-        <img
-          src={notFound}
-          className="w-full h-[70vh] object-cover "
-          alt="404 not Found"
-        />
-        <Link to="/" className=" flex justify-center mt-4">
-          <button
-            type="button"
-            className="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
-          >
-            Go Home
-          </button>
-        </Link>
+    <main className="flex items-center justify-center min-h-screen bg-gray-900 p-4 text-center">
+      <section className="max-w-2xl">
+        {/* 404 Title */}
+        <h1 className="text-7xl font-extrabold text-red-500">404</h1>
+        <h2 className="mt-4 text-2xl font-semibold text-white">
+          Oops! Page Not Found
+        </h2>
+        <p className="mt-2 text-gray-400">
+          The page you’re looking for doesn’t exist or has been moved.
+        </p>
+
+        {/* Image */}
+        <div className="mt-6">
+          <img
+            src={notFound}
+            className="w-full h-64 object-cover rounded-xl shadow-lg"
+            alt="Not Found"
+          />
+        </div>
+
+        {/* Go Home Button */}
+        <div className="mt-6">
+          <Link to="/">
+            <button
+              type="button"
+              className="px-6 py-3 text-sm font-medium text-white bg-green-600 hover:bg-green-700 rounded-lg shadow-lg transition"
+            >
+              ⬅ Back to Home
+            </button>
+          </Link>
+        </div>
       </section>
     </main>
   );
